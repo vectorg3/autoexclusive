@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="../styles/header.css" />
+        <link rel="stylesheet" href="../styles/index.css" />
+        <title>Главная</title>
+    </head>
+    <body >
+
+        <script>
+    let isAlertShow = sessionStorage.getItem('isAlertShow');
+    if(!isAlertShow){
+        let name = prompt('Введите ваше имя');
+        alert(`Добро пожаловать, ${name}`);
+        sessionStorage.setItem('isAlertShow', true);
+    }
+</script>
+
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    AutoExclusive
+                    <div class="header__minilogo">
+                     Unleash the power of your car
+                    </div>
+                </div>
+                <img class="logo" src="../images/logo.jpg" alt="" />
+                <div class="header__nav">
+                    <a href="index" class="nav__item active">Главная</a>
+                    <a href="menu.html" class="nav__item">Услуги</a>
+                    <a href="form.html" class="nav__item">Оставить заявку</a>
+                    <a href="orders.html" class="nav__item">Заявки</a>
+                </div>
+            </div>
+        </header>
+         <main>
+            <script>
+                function whattime(){
+                    const dateName=new Array("воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота");
+        
+        const now = new Date();
+        const day = now.getDate() <= 9 ? "0" + now.getDate() : now.getDate();
+        const month = now.getMonth()+1 <= 9 ? "0" + now.getMonth()+1 : now.getMonth()+1;
+        document.writeln("Сегодня " + day + "." + month + "." + now.getFullYear() + " г., " + dateName[now.getDay()]);
+        
+        const h = now.getHours() <= 9 ? "0" + now.getHours() : now.getHours();
+        const m = now.getMinutes() <= 9 ? "0" + now.getMinutes() : now.getMinutes();
+        const s = now.getSeconds() <= 9 ? "0" + now.getSeconds() : now.getSeconds();
+        document.writeln("<br>Сейчас: " + h + ":" + m + ":" + s);
+                }
+            </script>
+                    <div class="main__container">
+                        <div class="main__description">
+                          Здравствуйте! Вас приветсвует детейлинг-сервис Auto Exclusive. Только у нас вы сможете не только качественно обслужить свой автомобиль, но и модернизировать его как только захотите!</br></br>
+                          Вы когда-нибудь задумывались о том что вам не хватает мощности двигателя? Легко! Мы поможем вам установить турбину или сделать новую прошивку Stage1 или Stage2...Или вы хотите что-то экстремальное? Тогда Stage3 вам точно понравится!</br>
+                          Так же мы сделаем вам шума- и вибро-изоляцию автомобиля, покрасим его в яркий, притягивающий взгляды цвет, ну и конечно же подберем обвесы на ваш автомобиль, чтобы придать ему стиля!</br></br></br>
+                          Приходите в Auto Exclusive и раскройте всю мощь вашего автомобиля!</br></br>
+                        <a style=": center; color: black;">
+                            <script>
+                            whattime();
+                            </script>
+                        </a>
+                        </div>
+                    </div>
+            </main>
+    </body>
+</html>

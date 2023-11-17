@@ -1,0 +1,74 @@
+main {
+    width: 100%;
+    height: 91%;
+    background-image: url(../images/backstage.jpg);
+    background-size: cover;
+}
+
+.page__title {
+    margin-bottom: 1rem;
+}
+.main__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    align-items: center;
+    gap: 2rem;
+}
+.main__description {
+    padding: 2rem;
+    background-color: #e7e7e7;
+    font-size: 1.1em;
+    max-width: 500px;
+    max-height: 500px;
+    border: ridge;
+    border-width: 7px;
+    border-style: ridge;
+    border-color: black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    position: relative;
+    background-color: rgb(224,224,224);
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: black;
+    box-shadow: rgb(128,128,128);
+    padding: 15px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 154px;
+    height: 49px;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
+
+button::before {
+    content: '';
+    background-color: rgb(68,224,93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+}
+.description{
+    font-size: 18px;
+}
+button:hover::before {
+    width: 100%;
+}
